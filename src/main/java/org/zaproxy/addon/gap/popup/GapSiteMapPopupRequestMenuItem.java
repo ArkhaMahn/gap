@@ -1,0 +1,31 @@
+/*
+ * GAP - Get All Parameters, Links and Words
+ * Port of the GAP Burp extension (https://github.com/xnl-h4ck3r/GAP-Burp-Extension)
+ * to a ZAP add-on.
+ */
+package org.zaproxy.addon.gap.popup;
+
+import org.parosproxy.paros.Constant;
+import org.parosproxy.paros.model.SiteNode;
+import org.zaproxy.addon.gap.GapPanel;
+import org.zaproxy.zap.view.popup.PopupMenuItemSiteNodeContainer;
+
+public class GapSiteMapPopupRequestMenuItem extends PopupMenuItemSiteNodeContainer {
+
+    private static final long serialVersionUID = 1L;
+
+    private final GapPanel gapPanel;
+
+    public GapSiteMapPopupRequestMenuItem(GapPanel gapPanel) {
+        super(Constant.messages.getString("gap.popup.sendRequest"));
+        this.gapPanel = gapPanel;
+    }
+
+    @Override
+    protected void performAction(SiteNode siteNode) {
+        if (gapPanel == null || siteNode == null) {
+            return;
+        }
+        gapPanel.runSiteMapRequests(siteNode);
+    }
+}
