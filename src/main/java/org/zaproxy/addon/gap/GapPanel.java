@@ -141,6 +141,7 @@ public class GapPanel extends AbstractPanel implements GapContext {
     private final JCheckBox cbToolTips = defineCheckBox("Show contextual help", true);
     private final JCheckBox cbSaveFile = defineCheckBox("Auto save output to directory", true);
     private final JCheckBox cbExclusions = defineCheckBox("Link exclusions:", true);
+    private final JCheckBox cbShowTabOnStartup = defineCheckBox("Show tab on startup", false);
     private final JTextField inExclusions = new JTextField(GapConstants.DEFAULT_EXCLUSIONS, 30);
     private final JTextField inSaveDir = new JTextField();
     private final JTextField inQueryStringVal = new JTextField(GapConstants.DEFAULT_QSV, 5);
@@ -678,7 +679,8 @@ public class GapPanel extends AbstractPanel implements GapContext {
                         .addGroup(
                                 gl.createSequentialGroup()
                                         .addComponent(lblOutputOptions)
-                                        .addComponent(cbToolTips))
+                                        .addComponent(cbToolTips)
+                                        .addComponent(cbShowTabOnStartup))
                         .addGroup(
                                 gl.createSequentialGroup()
                                         .addComponent(cbSaveFile)
@@ -808,7 +810,8 @@ public class GapPanel extends AbstractPanel implements GapContext {
                         .addGroup(
                                 gl.createParallelGroup()
                                         .addComponent(lblOutputOptions)
-                                        .addComponent(cbToolTips))
+                                        .addComponent(cbToolTips)
+                                        .addComponent(cbShowTabOnStartup))
                         .addGroup(
                                 gl.createParallelGroup()
                                         .addComponent(cbSaveFile)
