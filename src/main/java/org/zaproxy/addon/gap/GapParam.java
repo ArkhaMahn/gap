@@ -64,6 +64,7 @@ public class GapParam extends AbstractParam {
     private static final String PARAM_STOP_WORDS = "gap.stopWords";
     private static final String PARAM_TOOLTIPS = "gap.tooltips";
     private static final String PARAM_QUERY_STRING_VAL = "gap.queryStringVal";
+    private static final String PARAM_SHOW_TAB_ON_STARTUP = "gap.showTabOnStartup";
 
     private boolean saveFile;
     private boolean paramUrl;
@@ -110,6 +111,7 @@ public class GapParam extends AbstractParam {
     private String stopWords;
     private boolean tooltips;
     private String queryStringVal;
+    private boolean showTabOnStartup;
 
     public GapParam() {
         super();
@@ -162,6 +164,7 @@ public class GapParam extends AbstractParam {
         stopWords = readString(PARAM_STOP_WORDS, GapConstants.DEFAULT_STOP_WORDS);
         tooltips = readBoolean(PARAM_TOOLTIPS, true);
         queryStringVal = readString(PARAM_QUERY_STRING_VAL, GapConstants.DEFAULT_QSV);
+        showTabOnStartup = readBoolean(PARAM_SHOW_TAB_ON_STARTUP, false);
     }
 
     private boolean readBoolean(String key, boolean defaultValue) {
@@ -233,6 +236,7 @@ public class GapParam extends AbstractParam {
         setProperty(PARAM_STOP_WORDS, stopWords);
         setProperty(PARAM_TOOLTIPS, tooltips);
         setProperty(PARAM_QUERY_STRING_VAL, queryStringVal);
+        setProperty(PARAM_SHOW_TAB_ON_STARTUP, showTabOnStartup);
     }
 
     private void setProperty(String key, Object value) {
@@ -513,6 +517,14 @@ public class GapParam extends AbstractParam {
 
     public void setToolTips(boolean tooltips) {
         this.tooltips = tooltips;
+    }
+
+    public boolean isShowTabOnStartup() {
+        return showTabOnStartup;
+    }
+
+    public void setShowTabOnStartup(boolean showTabOnStartup) {
+        this.showTabOnStartup = showTabOnStartup;
     }
 
     public void setParamsEnabled(boolean paramsEnabled) {
