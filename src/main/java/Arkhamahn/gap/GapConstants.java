@@ -1,4 +1,4 @@
-package org.zaproxy.addon.gap;
+package Arkhamahn.gap;
 
 import java.awt.Color;
 import java.util.HashSet;

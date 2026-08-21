@@ -1,4 +1,4 @@
-package org.zaproxy.addon.gap;
+package Arkhamahn.gap;
 
 import java.awt.BorderLayout;
 import java.awt.Color;

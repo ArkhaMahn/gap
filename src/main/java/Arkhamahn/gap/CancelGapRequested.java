@@ -1,4 +1,4 @@
-package org.zaproxy.addon.gap;
+package Arkhamahn.gap;
 
 /** Exception raised when the user presses the CANCEL GAP button during a run. */
 public class CancelGapRequested extends RuntimeException {

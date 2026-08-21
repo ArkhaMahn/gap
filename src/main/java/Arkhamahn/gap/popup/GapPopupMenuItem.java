@@ -3,12 +3,12 @@
  * Port of the GAP Burp extension (https://github.com/xnl-h4ck3r/GAP-Burp-Extension)
  * to a ZAP add-on.
  */
-package org.zaproxy.addon.gap.popup;
+package Arkhamahn.gap.popup;
 
 import java.util.List;
 import org.parosproxy.paros.Constant;
 import org.parosproxy.paros.network.HttpMessage;
-import org.zaproxy.addon.gap.GapPanel;
+import Arkhamahn.gap.GapPanel;
 import org.zaproxy.zap.view.messagecontainer.http.HttpMessageContainer;
 import org.zaproxy.zap.view.popup.PopupMenuItemHttpMessageContainer;
 

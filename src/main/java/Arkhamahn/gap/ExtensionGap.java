@@ -3,7 +3,7 @@
  * Port of the GAP Burp extension (https://github.com/xnl-h4ck3r/GAP-Burp-Extension)
  * to a ZAP add-on.
  */
-package org.zaproxy.addon.gap;
+package Arkhamahn.gap;
 
 import java.io.PrintWriter;
 import java.io.Writer;
@@ -19,8 +19,8 @@ import org.parosproxy.paros.extension.ExtensionPopupMenuItem;
 import org.parosproxy.paros.model.Model;
 import org.parosproxy.paros.view.OutputPanel;
 import org.parosproxy.paros.view.View;
-import org.zaproxy.addon.gap.popup.GapPopupMenu;
-import org.zaproxy.addon.gap.popup.GapPopupMenuItem;
+import Arkhamahn.gap.popup.GapPopupMenu;
+import Arkhamahn.gap.popup.GapPopupMenuItem;
 
 public class ExtensionGap extends ExtensionAdaptor {
 
@@ -56,7 +56,7 @@ public class ExtensionGap extends ExtensionAdaptor {
 
     @Override
     public void postInit() {
-        if (this.getView() != null && gapPanel != null) {
+        if (this.getView() != null && gapPanel != null && gapParam.isShowTabOnStartup()) {
             // Make the GAP tab deterministically visible and selected on startup, so the layout
             // changes are verifiable without hunting for the tab in the workbench strip.
             View.getSingleton().getMainFrame().getWorkbench().showPanel(gapPanel);

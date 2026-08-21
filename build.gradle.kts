@@ -5,7 +5,7 @@ plugins {
     id("org.zaproxy.add-on") version "0.13.1"
 }
 
-group = "org.zaproxy.addon"
+group = "Arkhamahn"
 version = "1.0.0"
 description =
     "GAP: Find the parameters, links and words that may not be obvious. Port of the GAP Burp extension by @xnl_h4ck3r."
@@ -36,7 +36,7 @@ zapAddOn {
         author.set("Arkhamahn")
         url.set("https://github.com/ArkhaMahn/gap")
         bundle {
-            baseName.set("org.zaproxy.addon.gap.resources.Messages")
+            baseName.set("Arkhamahn.gap.resources.Messages")
             prefix.set("gap")
         }
     }
